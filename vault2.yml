@@ -1,0 +1,18 @@
+---
+- hosts: web
+
+  tasks:
+
+  - name: using vault
+    include_vars:
+      file: secret
+
+  - name: output
+    debug:
+      msg: "{{ mysecret }}"
+
+  - name: copy
+    copy:
+      content: "{{ mysecret }}"
+      dest: /tmp/myvault.txt
+

@@ -1,0 +1,7 @@
+---
+- name: restart-nginx-service
+  systemd:
+    state: restarted
+    daemon_reload: yes
+    name: nginx
+# handlers file for roles/nginx-config

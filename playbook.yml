@@ -1,0 +1,5 @@
+- name: First Play
+  hosts: all
+  tasks:
+  - include_role:
+      name: lb

@@ -1,0 +1,7 @@
+---
+- name: Install Wildfly
+  hosts: app_servers
+  become: yes
+  tasks:
+  - include_role:
+      name: wildflyapp

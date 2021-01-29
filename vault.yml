@@ -1,0 +1,13 @@
+---
+- hosts: web
+ 
+  tasks:
+
+  - name: get var
+    include_vars:
+      file: secret
+
+  - name: copy the content
+    copy:
+      content: "{{ mysecret }}"
+      dest : /tmp/valut.txt
